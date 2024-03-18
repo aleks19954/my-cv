@@ -1,5 +1,7 @@
-$main-gap: 20px;
-
+@import './variables';
+@import '../CV/Details/details.scss';
+@import '../CV/Header/header.scss';
+@import '../CV/Personal/personal.scss';
 
 * {
     box-sizing: border-box;
@@ -28,29 +30,9 @@ h2 {
     grid-template-columns: 250px 1fr;
 }
 
-.cv-header {
-    grid-area: header;
-    padding: $main-gap;
-    text-align: center;
-}
 
-.cv-personal {
-    padding: $main-gap;
-    background-color: #ddd;
-    text-align: center;
 
-    .cv-photo {
-        width: 100%;
-        margin-top: $main-gap;
-        margin-bottom: $main-gap;
-        border-radius: 50%;
-    }
-}
 
-.cv-details {
-    padding: $main-gap;
-    text-align: center;
-    background-color: #fafafa;
-    
-}
+
+
 
