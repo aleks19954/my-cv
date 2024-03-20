@@ -1,18 +1,13 @@
-    interface CVData {
-    name: string,
-    lastName: string,
-  }
-  
-    const cvData : CVData = {
-    name: "Aleksander",
-    lastName: "Noworolnik",
+import { CVPersonal } from "../types"
 
-  }
+type Props = {
+    data: CVPersonal
+}
 
-export const Header = () => {
+export const Header = ({data:{name,lastName}} : Props) => {
     return (
     <header className='cv-header'>
-<h1> CV { cvData.name } {cvData.lastName }</h1>
+<h1> CV { name } {lastName }</h1>
 </header>
     )
 }

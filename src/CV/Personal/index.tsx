@@ -1,25 +1,16 @@
+import { CVPersonal } from "../types";
 
-  interface CVData {
-    photo: string,
-    name: string,
-    lastName: string,
-    position: string,
-  }
-  
-  const cvData : CVData = {
-    photo: "https://placehold.co/400x400/EEE/31343C?font=montserrat&text=AN",
-    name: "Aleksander",
-    lastName: "Noworolnik",
-    position: "Developer",
-  }
+type Props = {
+    data: CVPersonal
+}
 
-export const Personal = () => {
+export const Personal = ({data:{photo,name,lastName,position}} : Props) => {
     return (
 <aside className='cv-personal'>
 <h2> Personal data </h2>
-<img className='cv-photo' src={cvData.photo} alt={`${cvData.name} ${cvData.lastName} profile photo`} />
-<p> { cvData.name } { cvData.lastName }</p>
-<small> { cvData.position }</small>
+<img className='cv-photo' src={photo} alt={`${name} ${lastName} profile photo`} />
+<p> { name } { lastName }</p>
+<small> { position }</small>
 </aside>
     )
 }
